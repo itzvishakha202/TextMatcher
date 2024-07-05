@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> TextMatcher</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 class="header-name">
+    TextMatcher
+    </h1>
+    <h2 class="header-tagline">
+        Lets Match Your Text!
+    </h2>
+     <div class="text-container">
+       <input type="text" class="input-text" id="OG-text">
+       <input type="text" class="input-text" id="compare-text">
+     </div>
+
+     <p class="text-result" id="text-result"></p>
+
+     <button type="button" class="btn" onclick="CheckMatch()">
+        Check Match
+     </button>
+
+     <script>
+        function CheckMatch(){
+            const OriginalText = document.getElementById("OG-text")
+            const CompareText = document.getElementById("compare-text")
+
+            const TextResult = document.getElementById("text-result")
+
+            if(OriginalText.value == CompareText.value){
+                TextResult.innerText = "Text Matched"
+            }
+            else{
+                TextResult.innerText = "Text doesn't Matched"
+            }
+        }
+
+     </script>
+</body>
+</html>
